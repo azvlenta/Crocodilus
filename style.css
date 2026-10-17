@@ -1,0 +1,266 @@
+/* ===== RESET ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #e6e6e6;
+    min-height: 100vh;
+    padding: 30px;
+
+    /* Fondo principal */
+    background-color: #1a231c;
+
+    /* Textura de escamas elegante */
+    background-image:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(93, 122, 103, 0.12) 22px,
+            transparent 23px
+        ),
+        radial-gradient(
+            circle at 50% 0,
+            rgba(93, 122, 103, 0.12) 22px,
+            transparent 23px
+        );
+
+    background-size: 45px 45px;
+}
+
+/* ===== CONTENEDOR ===== */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== HEADER ===== */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #76c388;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header p {
+    color: #76a37e;
+    margin-top: 10px;
+}
+
+/* ===== FORMULARIO ===== */
+
+.task-form {
+    background: #0127055f;
+    border: 3px solid #15540c;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.task-form h2 {
+    margin-bottom: 20px;
+    color: #68a674;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    border: 2px solid #0c5003;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: rgba(83, 203, 123, 0.323);
+    transition: 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2c6e3f;
+    box-shadow: 0 0 10px rgb(20, 63, 32);
+}
+
+input[type="color"] {
+    width: 80px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== BOTÓN AGREGAR ===== */
+
+#addTaskBtn {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    background: #1c502a;
+    color: rgb(122, 179, 126);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#addTaskBtn:hover {
+    background: #214f2f;
+    transform: translateY(-2px);
+}
+
+/* ===== SECCIÓN DE TAREAS ===== */
+
+.tasks-section {
+    margin-top: 20px;
+}
+
+.tasks-header h2 {
+    margin-bottom: 20px;
+    color: #74c386;
+}
+
+/* ===== TARJETA ===== */
+
+.task-card {
+    background: rgba(2, 53, 8, 0.521);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px;
+    margin-bottom: 15px;
+    border-color: rgb(37, 228, 100);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.task-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Barra de color */
+
+.task-color {
+    width: 14px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #35a24199;
+}
+
+/* Contenido */
+
+.task-content {
+    flex: 1;
+}
+
+.task-title {
+    color: #28c540;
+    margin-bottom: 6px;
+}
+
+.task-description {
+    color: #21973e;
+    margin-bottom: 10px;
+}
+
+.task-date {
+    color: #239030;
+}
+
+/* ===== BOTONES ===== */
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.complete-btn,
+.delete-btn {
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Completar */
+
+.complete-btn {
+    background: #3e8c4d;
+    color: white;
+}
+
+.complete-btn:hover {
+    background: #2e6939;
+}
+
+/* Eliminar */
+
+.delete-btn {
+    background: #c74a4a;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #9f3535;
+}
+
+/* ===== TAREA COMPLETADA ===== */
+
+.task-card.completed {
+    opacity: 0.7;
+}
+
+.task-card.completed .task-title,
+.task-card.completed .task-description {
+    text-decoration: line-through;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 700px) {
+
+    .task-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        width: 100%;
+    }
+
+    .complete-btn,
+    .delete-btn {
+        flex: 1;
+    }
+
+    .task-color {
+        width: 100%;
+        height: 10px;
+    }
+}

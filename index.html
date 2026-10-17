@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crocodilus</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Encabezado -->
+        <header>
+            <h1>🐊Crocodilus🐊</h1>
+        </header>
+
+        <!-- Formulario de creación -->
+        <section class="task-form">
+
+            <h2>Nueva tarea</h2>
+
+            <form id="taskForm">
+
+                <div class="form-group">
+                    <label for="title">Título</label>
+                    <input
+                        type="text"
+                        id="title"
+                        placeholder="Escribe una tarea..."
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Descripción</label>
+                    <textarea
+                        id="description"
+                        rows="4"
+                        placeholder="Detalles de la tarea..."
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="color">Color</label>
+                    <input
+                        type="color"
+                        id="color"
+                        value="#48664F"
+                    >
+                </div>
+
+                <button type="submit" id="addTaskBtn">
+                    Añadir tarea
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Lista de tareas -->
+        <section class="tasks-section">
+
+            <div class="tasks-header">
+                <h2>Mis tareas</h2>
+            </div>
+
+            <div id="tasksContainer">
+
+                <!-- Ejemplo de tarjeta de tarea -->
+                <article class="task-card">
+
+                    <div class="task-color"></div>
+
+                    <div class="task-content">
+
+                        <h3 class="task-title">
+                            Ejemplo de tarea
+                        </h3>
+
+                        <p class="task-description">
+                            Esta es una descripción de ejemplo.
+                        </p>
+
+                        <small class="task-date">
+                            Creada el: 17/10/2026
+                        </small>
+
+                    </div>
+
+                    <div class="task-actions">
+                        <button class="complete-btn">
+                            Completar
+                        </button>
+
+                        <button class="delete-btn">
+                            Eliminar
+                        </button>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
